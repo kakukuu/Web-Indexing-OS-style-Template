@@ -14,7 +14,7 @@ const username = "kakukuu"; // GitHub 用户名
 const repo = "Web-Indexing-OS-style-Template"; // 仓库名称
 // const key = ""; // 如果需要身份验证，请取消注释并提供有效的 GitHub Token
 
-const commitCount = 2; // 要获取的提交记录数量
+const commitCount = 3; // 要获取的提交记录数量
 
 // GitHub API 获取提交记录的 URL
 const apiUrl = `https://api.github.com/repos/${username}/${repo}/commits`;
