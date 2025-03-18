@@ -3,6 +3,7 @@
 <!-- 文档类型声明为 HTML5，并设置页面语言为简体中文 -->
 
 <head>
+<!-- 头部信息（不显示在网页上） -->
     <meta charset="UTF-8">
     <!-- 定义网页字符编码为 UTF-8，确保支持中文等多语言字符显示 -->
     
@@ -12,44 +13,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 设置视口宽度与设备屏幕宽度一致，使网页在移动设备上自适应 -->
 
-    <!-- 外部引用：引入清除默认样式的 CSS 文件 -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
+    <!-- 外部引用：设置浏览器标签的小图标（favicon），图标文件位于项目的 assets/images 文件夹中 -->
 
-    <!-- 外部引用：引入自定义样式文件，定义网页布局和样式 -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 外部引用：引入清除默认样式的 CSS 文件 -->
     
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 外部引用：引入自定义样式文件，定义网页全局布局和样式 -->
+
     <link rel="stylesheet" href="css/responsive.css">
     <!-- 外部引用：引入响应式网页样式的 CSS 文件，文件位于项目的 css 文件夹中 -->
 </head>
 
 <body>
-    <!-- 页面主体内容 -->
+<!-- 页面主体内容 -->
 
-    <!-- 页眉 -->
     <header class="header page-header expanded">
+    <!-- 页眉，交互部 -->
+    <!-- 不是主页所以选 page-header，默认打开所以加上 expanded （通过 header.css 控制）-->
         <div class="header-content page-header-content">
+        <!-- 页眉内容的排版容器，不是主页所以选 page-header-content-->
             <h1 class="header-title">Folder Example With Info</h1>
-            <!-- 主标题，显示在页面顶部 -->
+            <!-- 主标题 -->
 
             <p class="subheader">
+            <!-- 副标题格式的页面导航链接 -->
                 <a href="index.html">Homepage</a> |
-                <!-- 页面导航链接，返回主页 -->
+                <!-- 外部引用：导航链接，指向主页 -->
             </p>
 
             <div class="info-icon">
+            <!-- 信息图标，点击后展开信息面板，由 infoToggle.js 控制 -->
                 <img src="assets/images/info-icon-gray.svg" alt="Info Icon" id="infoIcon">
                 <!-- 外部引用：信息图标图片，文件位于 assets/images 文件夹中 -->
             </div>
         </div>
 
         <div class="info-panel open" id="infoPanel">
-            <!-- 展开的信息面板，包含页面简介 -->
+            <!-- 展开的信息面板，包含页面简介，默认打开所以加上 open -->
             <div class="info">
+            <!-- 文字信息的排版容器 -->
                 <p>
                     Info: the infomation panel of this page is set to be open by default, and you can click the info icon to close it.
                 </p>
             </div>
             <div class="info">
+            <!-- 文字信息的排版容器 -->
                 <p>Possible SVG:</p> 
             </div>
             <svg id="svgContent" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -85,15 +95,18 @@
                 <line x1="390" y1="105" x2="380" y2="100" stroke="gray" stroke-width="2"/>
             </svg>
             </svg>
-            
+
             <div class="tags">
-            <span class="tag clickable" id="copyButton"><img src="assets/images/copy-graphic.png">SVG code</span>
+            <!-- 标签的排版容器 -->
+                <span class="tag clickable" id="copyButton"><img src="assets/images/copy-graphic.png">SVG code</span>
+                <!-- 可点击的标签，用于复制 SVG 代码，由 copySVG.js 控制 -->
             </div>
         </div>
 
         <div class="keywords-background">
-            <!-- 背景关键词，用于增强页面内容的视觉效果 -->
+        <!-- 背景关键词系统的排版容器 -->
             <div class="keywords">
+                <!-- 关键词系统的内容 -->
                 <span style="font-size: 68px;">Key</span>
                 <span style="font-size: 80px;">Word</span>
                 <span style="font-size: 64px;">System</span>/br
@@ -103,12 +116,14 @@
         </div>
     </header>
 
-    <!-- 主体内容 -->
-    <main class="main-content expanded">
+    <main class="main-content">
+    <!-- 内容部 -->
         <div class="card-container">
+        <!-- 卡片的排版容器 -->
             <div class="card-container folder">
-                <!-- 卡片一 -->
+            <!-- 特定类型的卡片排版容器，文件夹样式 -->
                 <a href="page2.html" class="card">
+                <!-- 卡片，指向 page2.html -->
                     <h2 class="card-title"><img src="assets/images/folder.png">a Possible Folder without info</h2>
                     <div class="keywords-background">
                         <div class="keywords">
@@ -121,13 +136,12 @@
                     </div>
                 </a>
             </div>
-
             <hr>
-            <!-- 卡片列表：展示多个内容项 -->
             <div class="card-container lecture">
+            <!-- 特定类型的卡片排版容器，文件样式 -->
                 
-                <!-- 卡片三 -->
                 <a href="404.html" target="_blank" class="card lecture">
+                <!-- 卡片，指向 404.html，打开新标签页 -->
                     <h2 class="card-title lecture">
                         <img src="assets/images/pdf.png"><br>a<br>possible url as pdf （404）
                         <!-- 外部引用：重复使用的 PDF 图标 -->
@@ -144,6 +158,8 @@
                 </a>
 
                 <div class="card lecture stack" id="cardStack">
+                <!-- stack 样式的卡片集合，选择 stack，通过 cardStack.js 控制 -->
+                <!-- 里面存放相同名字的文件，通过后缀以及小图标来区分 -->
                     <a href="404.html" target="_blank" class="card lecture subcard">
                         <h2 class="card-title lecture"><img src="assets/images/featured.png"><br>another<br>possible featured url as pdf in stack （404）</h2>
                         <div class="keywords-background">
@@ -156,7 +172,6 @@
                             </div>
                         </div>
                     </a>
-                    
                     <a href="https://github.com/kakukuu/Web-Indexing-OS-style-Template" target="_blank" class="card lecture subcard">
                         <h2 class="card-title lecture"><img src="assets/images/github.png"><br>another<br>possible url as github in stack</h2>
                             <div class="keywords-background">
