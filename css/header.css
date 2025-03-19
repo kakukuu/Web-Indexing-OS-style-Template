@@ -43,24 +43,10 @@
   font-size: 48px;
   font-weight: 900;
   color: rgb(54, 54, 54);
-  padding-right: 20vw;
+  padding-right: 10vw; /* 使标题不会被 info-icon 遮挡 */
   white-space: nowrap; /* 不换行 */
   overflow: hidden; /* 隐藏溢出文本 */
   text-overflow: ellipsis; /* 溢出文本显示省略号 */
-}
-
-.header-signature {
-  font-family: 'ExtremeBoldSongti', serif;
-  font-size: 20px;
-  visibility: hidden;
-  font-weight: bolder;
-  color: rgb(54, 54, 54);
-  transition: visibility 0.3s ease;
-  margin-bottom: 10vh;
-}
-
-.header-signature.open {
-  visibility: visible;
 }
 
 .subheader {
@@ -69,12 +55,23 @@
   font-weight: bolder;
   color: #363636;
   margin-bottom: 10vh;
+  padding-right: 10vw; /* 使副标题标题不会被 info-icon 遮挡 */
 }
+
+.subheader.signature {
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+.subheader.signature.open {
+  visibility: visible;
+}
+
 
 .info-icon {
   position: absolute;
   opacity: 80%;
-  top: 20px;
+  top: 8px;
   right: 7vw;
   cursor: pointer;
   transition: background-image 0.3s ease; /* 平滑过渡 */

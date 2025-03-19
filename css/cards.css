@@ -152,7 +152,7 @@
   top: 0;
   left: 0;
   width: 100vw; /* 视口宽度 */
-  height: 100vh; /* 视口高度 */
+  min-height: 100vh; /* 最小视口高度 */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -162,6 +162,7 @@
   pointer-events: auto; /* 卡片可点击 */
   gap: 20px; /* 设置卡片之间的间隙 (和container一样)*/
   padding: 5vw;
+  overflow-y: scroll; /* 增加垂直滚动条 */
 }
 
 .card.lecture.stack.active ~ * {
