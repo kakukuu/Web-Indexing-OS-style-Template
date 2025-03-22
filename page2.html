@@ -26,30 +26,36 @@
     <!-- 外部引用：引入响应式网页样式的 CSS 文件，文件位于项目的 css 文件夹中 -->
 </head>
 
+
 <body>
-<!-- 页面内容主体 -->
+    <!-- 页眉部分，没有信息面板 -->
     <header class="header page-header">
-    <!-- 页眉，交互部 -->
-    <!-- 不是主页所以选择 page-header -->
+    <!-- 页眉部分的容器，包含页眉内容 -->
         <div class="header-content page-header-content">
-        <!-- 页眉的排版容器，不是主页所以选择 page-header-content -->
+        <!-- 页眉内容的容器，包含页眉标题和副标题 -->
             <div class="header-text">
-            <!-- 标题和副标题区域的排版容器，用于区分插图 -->
+            <!-- 页眉文本的容器 -->
                 <h1 class="header-title">a Possible Folder without info</h1>
                 <!-- 标题 -->
                 <p class="subheader">
                 <!-- 副标题格式的页面导航链接 -->
                     <a href="index.html">Homepage</a> | <a href="page1.html">Folder Example With Info</a>
+                    ▏
+                    <!-- ▏ (U+258F)：左八分之一块 -->
                     <!-- 第一个页面导航链接，返回主页与 page1.html -->
                     <br>
-                    <a href="index.html">Homepage</a> |
+                    <a href="index.html">Homepage</a> 
+                    
+                    ▏
+                    <!-- ▏ (U+258F)：左八分之一块 -->
                     <!-- 第二个页面导航链接，返回主页 -->
                 </p>
             </div>
-            <div class="info-panel"></div>
-            <!-- 信息面板，不包含信息内容，占排版 -->
         </div>
+        <div class="info-panel"></div>
+        <!--空的信息面板，保持排版 -->
     </header>
+
 
     <main class="main-content">
     <!-- 内容部 -->
