@@ -47,10 +47,13 @@
     <!-- 是主页所以选择 index-header -->   
         <div class="header-content index-header-content">
         <!-- 页眉的排版容器，是主页所以选择 index-header-content -->  
-            <h1 class="header-title">Homepage</h1>
-            <!-- 网页主标题 -->
-            <p class="subheader signature">— a demostration of "Web-Indexing-OS-style-Template"</p>
-            <!-- 页眉中的签名文字 -->
+            <div class="header-text">
+            <!-- 标题和副标题区域的排版容器，用于区分插图 -->
+                <h1 class="header-title">Homepage</h1>
+                <!-- 网页主标题 -->
+                <p class="subheader signature">— a demostration of "Web-Indexing-OS-style-Template"</p>
+                <!-- 页眉中的签名文字 -->
+            </div>
             <div class="info-icon">
                 <!-- 信息图标，点击后展开信息面板，由 infoToggle.js 控制 -->
                 <img src="assets/images/info-icon-light.svg" alt="Info Icon" id="infoIcon">
@@ -163,6 +166,8 @@
     <!-- 外部引用：动态获取和显示更新列表的 JavaScript 文件，位于 javascripts 文件夹中 -->
     <script src="javascripts/copyCommitList.js"></script>
     <!-- 外部引用：实现复制更新列表功能的 JavaScript 文件，位于 javascripts 文件夹中 -->
+    <script src="javascripts/headerImage.js"></script>
+    <!-- 外部引用：控制页眉图片显示的脚本，位于 javascripts 文件夹中 -->
     <script>
     // 动态设置当前年份到页面
         document.getElementById("currentYear").textContent = new Date().getFullYear();

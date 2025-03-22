@@ -11,7 +11,7 @@
 
 // GitHub 用户名和仓库名称
 const username = "kakukuu"; // GitHub 用户名
-const repo = "juekong-research"; // 仓库名称
+const repo = "Web-Indexing-OS-style-Template"; // 仓库名称
 // const key = ""; // 如果需要身份验证，请取消注释并提供有效的 GitHub Token
 
 const commitCount = 2; // 要获取的提交记录数量

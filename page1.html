@@ -34,15 +34,19 @@
     <!-- 不是主页所以选 page-header，默认打开所以加上 expanded （通过 header.css 控制）-->
         <div class="header-content page-header-content">
         <!-- 页眉内容的排版容器，不是主页所以选 page-header-content-->
-            <h1 class="header-title">Folder Example With Info</h1>
-            <!-- 主标题 -->
+            <img class="header-img" src="assets/images/icon.png" alt="Header Image">
+            <!-- 可选的封面图片，这里文件位于 assets/images 文件夹中 -->
+            <div class="header-text">
+            <!-- 标题和副标题区域的排版容器，用于区分插图 -->
+                <h1 class="header-title">Folder Example With Info</h1>
+                <!-- 主标题 -->
 
-            <p class="subheader">
-            <!-- 副标题格式的页面导航链接 -->
-                <a href="index.html">Homepage</a> |
-                <!-- 外部引用：导航链接，指向主页 -->
-            </p>
-
+                <p class="subheader">
+                <!-- 副标题格式的页面导航链接 -->
+                    <a href="index.html">Homepage</a> |
+                    <!-- 外部引用：导航链接，指向主页 -->
+                </p>
+            </div>
             <div class="info-icon">
             <!-- 信息图标，点击后展开信息面板，由 infoToggle.js 控制 -->
                 <img src="assets/images/info-icon-gray.svg" alt="Info Icon" id="infoIcon">
@@ -201,5 +205,7 @@
     <!-- 外部引用：实现卡片堆叠效果的脚本，位于 javascripts 文件夹中 -->
     <script src="javascripts/copySVG.js"></script>
     <!-- 外部引用：实现复制 SVG 代码功能的脚本，位于 javascripts 文件夹中 -->
+    <script src="javascripts/headerImage.js"></script>
+    <!-- 外部引用：控制页眉图片显示的脚本，位于 javascripts 文件夹中 -->
 </body>
 </html>

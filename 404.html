@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header class="header index-header">
-        <div class="header-content index-header-content">
-            <h1 class="header-title">4 0 4</h1>
-            <p class="subheader signature">— This address is outside the structure</p>
+    <header class="header index-header"><!-- 页眉区域，包含标题和签名 -->
+        <div class="header-content index-header-content"><!-- 页眉的文字区域 -->
+            <div class="header-text">
+                <h1 class="header-title">空</h1><!-- 页面内的标题 -->
+                <p class="subheader signature">— This address is outside the structure</p><!-- 页面内的签名 -->
+            </div>
             <div class="info-icon">
                 <img src="assets/images/info-icon-light.svg" alt="Info Icon" id="infoIcon">
             </div>
         </div>
-        <div class="info-panel" id="infoPanel">
+        <div class="info-panel" id="infoPanel"><!-- 可展开的信息面板，包含标签和联系方式 -->
             <div class="info">
                 <p>觀自在菩薩。行深般若波羅蜜多時。照見五蘊皆空。度一切苦厄。
 
@@ -46,30 +48,32 @@
             </div>
         </div>
     </header>
+
+    <!-- 主要内容 -->
     <main class="main-content">
         <div class="card-container">
             <div class="card-container folder">
+            <!-- 卡片一 -->
                 <a href="index.html" class="card">
-                    <h2 class="card-title">Homepage</h2>
+                    <h2 class="card-title">觉空</h2>
                     <div class="keywords-background">
                         <div class="keywords">
-                            <div class="keywords">
-                                <span style="font-size: 68px;">Key</span>
-                                <span style="font-size: 80px;">Word</span>
-                                <span style="font-size: 64px;">System</span>/br
-                                <span style="font-size: 50px;">Contents</span>
-                                <span style="font-size: 42px;">Hinting</span>
-                            </div>
+                            <!-- 关键词列表 -->
+                            <span style="font-size: 24px;">色即是空</span>
+                            <!-- 更多关键词 -->
                         </div>
                     </div>
                 </a>
             </div>
         </div>
     </main>
+
+    <!-- 引入脚本文件 -->
     <script src="javascripts/throttle.js"></script>
     <script src="javascripts/scrollHandler.js"></script>
     <script src="javascripts/infoToggle.js"></script>
     <script src="javascripts/main.js"></script>
+    <script src="javascripts/headerImage.js"></script>
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
