@@ -40,7 +40,6 @@
 }
 
 
-
 .header-img {
   width: 10vw;
   aspect-ratio: 1/1;
@@ -101,11 +100,10 @@
 .info-icon {
   position: absolute;
   opacity: 80%;
-  top: 8px;
+  top: min(3vh, 3vw); /* 保持在页面顶部 */
   right: 7vw;
   cursor: pointer;
   transition: background-image 0.3s ease; /* 平滑过渡 */
-  top: min(3vh, 3vw); /* 保持在页面顶部 */
 }
 
 .info-icon img {
@@ -115,8 +113,8 @@
 
 .info-panel {
   position: sticky; /* 改为固定定位，始终显示在视口内 */
-  margin-top: 4vh;
-  margin-bottom: 8vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   top: 18vh; /* 定位到页面顶部 a*/
   left: 0; /* 水平居中 */
   right: 0;
@@ -137,6 +135,7 @@
   top: 18vh; /* 定位到页面顶部 */
   min-height: 30vh;
   max-height: 50vh; /* 展开时的最大高度 */
+  margin-bottom: 6vh;
   -webkit-user-select: text; /* Chrome, Safari, Opera 禁止选中*/
   -moz-user-select: text;    /* Firefox 禁止选中*/
   -ms-user-select: text;     /* Internet Explorer/Edge 禁止选中*/
